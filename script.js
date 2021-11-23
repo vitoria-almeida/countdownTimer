@@ -3,6 +3,8 @@ const hours1 = document.getElementById("hours");
 const minutes1 = document.getElementById("mins");
 const seconds1 = document.getElementById("secs");
 
+const currentT = document.getElementById("currentTime");
+
 const newYearsEve = "31 Dec 2021";
 
 function countdownT(){
@@ -19,7 +21,9 @@ function countdownT(){
     days1.innerHTML = days2;
     hours1.innerHTML = formatTime(hours2);
     minutes1.innerHTML = formatTime(minutes2);
-    seconds1.innerHTML = formatTime(seconds2);  
+    seconds1.innerHTML = formatTime(seconds2); 
+
+    currentT.innerHTML = ((currentDate.getDate() )) + "/" + ((currentDate.getMonth() + 1)) + "/" + ((currentDate.getFullYear() ))
 }
 
 function formatTime(time){
